@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\Geometry">
+      <UniqueIdentifier>{74c1e95d-5154-4846-b038-36e62040b51e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\OpenGL">
+      <UniqueIdentifier>{0f2258e7-74c8-4823-ac94-4a3ae83661f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Basics">
+      <UniqueIdentifier>{d22e2855-f375-4ade-89ac-4bba49f5774a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\App">
+      <UniqueIdentifier>{b9f1c075-5a44-42d0-9fd4-f448a7c84b3a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\OpenGLHelpers.cpp">
+      <Filter>Source\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\OpenGLPixelFormat.cpp">
+      <Filter>Source\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\NativeWindows.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Colour.cpp">
+      <Filter>Source\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Module.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\AffineTransform.cpp">
+      <Filter>Source\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Colours.cpp">
+      <Filter>Source\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\OpenGLContext.cpp">
+      <Filter>Source\OpenGL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\OpenGLFunctions.h">
+      <Filter>Source\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\OpenGLHelpers.h">
+      <Filter>Source\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\OpenGLPixelFormat.h">
+      <Filter>Source\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\GLExtensions.h">
+      <Filter>Source\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Rectangle.h">
+      <Filter>Source\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Point.h">
+      <Filter>Source\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Colour.h">
+      <Filter>Source\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Application.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Window.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Graphics.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Desktop.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Component.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Memory.h">
+      <Filter>Source\Basics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\NativeIncludes.h">
+      <Filter>Source\Basics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Maths.h">
+      <Filter>Source\Basics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PixelFormats.h">
+      <Filter>Source\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Module.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\AffineTransform.h">
+      <Filter>Source\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\MissingOpenGLDefinitions.h">
+      <Filter>Source\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Colours.h">
+      <Filter>Source\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Line.h">
+      <Filter>Source\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Range.h">
+      <Filter>Source\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\OpenGLContext.h">
+      <Filter>Source\OpenGL</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
