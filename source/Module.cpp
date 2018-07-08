@@ -16,4 +16,6 @@ namespace squarepine
     #include "OpenGLContext.cpp"
 
     #include "NativeWindows.cpp"
+
+    #include "Threading/DynamicLibrary.cpp"
 }

@@ -1,17 +1,57 @@
-﻿Build started 03-06-18 20:29:48.
+﻿Build started 08-07-18 14:26:05.
      1>Project "F:\Work\SquarePine\EngineThing\vs2012\EngineThing\EngineThing.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Main.cpp ..\..\source\Module.cpp
-         Main.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Module.cpp ..\..\source\Threading\DynamicLibrary.h
+         DynamicLibrary.h
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(10): error C3646: 'noexcept' : unknown override specifier
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(14): error C2039: 'string' : is not a member of 'std'
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(14): error C2143: syntax error : missing ',' before '&'
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(41): error C2039: 'string' : is not a member of 'std'
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(41): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(41): error C2143: syntax error : missing ',' before '&'
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(49): error C2039: 'string' : is not a member of 'std'
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(49): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(49): error C2143: syntax error : missing ',' before '&'
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(49): error C3646: 'noexcept' : unknown override specifier
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(54): error C3646: 'noexcept' : unknown override specifier
+     1>f:\work\squarepine\enginething\source\threading\dynamiclibrary.h(14): error C2065: 'name' : undeclared identifier
          Module.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Work\SquarePine\EngineThing\vs2012\EngineThing\Debug\EngineThing.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Work\SquarePine\EngineThing\vs2012\EngineThing\Debug\EngineThing.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Work\SquarePine\EngineThing\vs2012\EngineThing\Debug\EngineThing.lib" /MACHINE:X86 Debug\Main.obj
-         Debug\Module.obj
-         EngineThing.vcxproj -> F:\Work\SquarePine\EngineThing\vs2012\EngineThing\Debug\EngineThing.exe
-     1>Done Building Project "F:\Work\SquarePine\EngineThing\vs2012\EngineThing\EngineThing.vcxproj" (Build target(s)).
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(359): error C2143: syntax error : missing ';' before '*'
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(359): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(360): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(361): error C2440: 'return' : cannot convert from 'nullptr' to 'int'
+                 A native nullptr can only be converted to bool or, using reinterpret_cast, to an integral type
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(362): error C2617: 'squarepine::getPeer' : inconsistent return statement
+                 f:\work\squarepine\enginething\source\nativewindows.cpp(359) : see declaration of 'squarepine::getPeer'
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(367): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(367): error C2143: syntax error : missing ',' before '*'
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(369): error C2065: 'peer' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(527): error C2143: syntax error : missing ';' before '*'
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(527): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(528): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(530): error C2059: syntax error : ')'
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(532): error C2440: 'return' : cannot convert from 'nullptr' to 'int'
+                 A native nullptr can only be converted to bool or, using reinterpret_cast, to an integral type
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(533): error C2617: 'squarepine::SquarePineWindowIdentifier::getOwnerOfWindow' : inconsistent return statement
+                 f:\work\squarepine\enginething\source\nativewindows.cpp(527) : see declaration of 'squarepine::SquarePineWindowIdentifier::getOwnerOfWindow'
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(537): error C2065: 'peer' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(539): error C2065: 'peer' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(540): error C2065: 'peer' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(540): error C2227: left of '->updateWindowProcedure' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(717): error C2065: 'renderContext' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(719): error C2065: 'renderContext' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(737): error C2065: 'renderContext' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(799): error C2065: 'renderContext' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(800): error C2065: 'renderContext' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(824): error C2065: 'renderContext' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(840): error C2065: 'renderContext' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(842): error C2065: 'renderContext' : undeclared identifier
+     1>f:\work\squarepine\enginething\source\nativewindows.cpp(843): error C2065: 'renderContext' : undeclared identifier
+         Generating Code...
+     1>Done Building Project "F:\Work\SquarePine\EngineThing\vs2012\EngineThing\EngineThing.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.66
+Time Elapsed 00:00:01.10

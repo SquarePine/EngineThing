@@ -1,5 +1,7 @@
 #include "Module.h"
 
+bool shouldDraw = true;
+
 #if SQUAREPINE_WINDOWS
     #include <Windows.h>
 #endif
@@ -28,11 +30,25 @@ LRESULT CALLBACK updateWindowProcedure (HWND hWnd, UINT message, WPARAM wParam, 
                 return -1;
         break;
 
+		case WM_CLOSE:
+			DestroyWindow (hWnd);
+            return 0;
+
+        case WM_ACTIVATE:
+        {
+            // The message WM_ACTIVE is sent whenever the application has focus.
+            // For example if the application is minimised then it is not in focus.
+            // As the application is not in focus it is pointless wasting clock
+            // cycles and graphics hardware to render to what cannot be seen.
+            shouldDraw = (BOOL) wParam != FALSE;
+            return 0;
+        }
+
         case WM_PAINT:
         {
             static TCHAR greeting[] = _T ("Hello, World!");
 
-            PAINTSTRUCT ps;
+            PAINTSTRUCT ps = { 0 };
             HDC hdc = BeginPaint (hWnd, &ps);
             TextOut (hdc, 5, 5, greeting, _tcslen (greeting));
             EndPaint (hWnd, &ps);
@@ -54,14 +70,7 @@ LRESULT CALLBACK updateWindowProcedure (HWND hWnd, UINT message, WPARAM wParam, 
 
 int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    Colour colour = Colours::black;
-    (void) colour;
-    OpenGLContext contextasdf;
-    (void) contextasdf;
-    Window windowasdf;
-    (void) windowasdf;
-
-    static TCHAR szWindowClass[]        = _T ("win32app");
+    static TCHAR windowClassName[]      = _T ("win32app");
     static TCHAR windowsTitle[]         = _T ("Win32 Guided Tour Application");
     static HINSTANCE handleInstance     = nullptr;
 
@@ -77,7 +86,7 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
     wcex.hCursor        = LoadCursor (nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH) (COLOR_WINDOW + 1);
     wcex.lpszMenuName   = nullptr;
-    wcex.lpszClassName  = szWindowClass;
+    wcex.lpszClassName  = windowClassName;
     wcex.hIconSm        = LoadIcon (wcex.hInstance, MAKEINTRESOURCE (IDI_APPLICATION));
 
     if (! RegisterClassEx (&wcex))
@@ -87,7 +96,7 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 
     handleInstance = hInstance;
 
-    HWND windowHandle = CreateWindow (szWindowClass, windowsTitle,
+    HWND windowHandle = CreateWindow (windowClassName, windowsTitle,
                                       WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
                                       800, 600,
                                       nullptr, nullptr, hInstance, nullptr);
@@ -101,11 +110,49 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
     UpdateWindow (windowHandle);
 
     MSG message;
+    zerostruct (message);
+
+#if 0
     while (GetMessage (&message, nullptr, 0, 0) != FALSE)
     {
         TranslateMessage (&message);
         DispatchMessage (&message);
     }
+#else
+    bool finished = false;
+    while (! finished)
+    {
+        DWORD currentTick = GetTickCount();
+        DWORD endTick = currentTick + (1000 / 60);
+
+        while (currentTick < endTick)
+        {
+            if (PeekMessage (&message, nullptr, 0, 0, PM_REMOVE) != FALSE)
+            {
+                if (message.message == WM_QUIT)
+                {
+                    finished = true;
+                    break;
+                }
+                else
+                {
+                    TranslateMessage (&message);
+                    DispatchMessage (&message);
+                }
+
+                currentTick = GetTickCount();
+            }
+            else
+            {
+                break;
+            }
+
+            //processFrame();
+        }
+    }
+#endif
+
+    UnregisterClass (windowClassName, handleInstance);
 
     return (int) message.wParam;
 }

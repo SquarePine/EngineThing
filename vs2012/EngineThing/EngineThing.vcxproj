@@ -99,6 +99,10 @@
     <ClCompile Include="..\..\source\OpenGLPixelFormat.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\source\Threading\DynamicLibrary.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Threading\DynamicLibrary.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\AffineTransform.h" />
@@ -123,6 +127,7 @@
     <ClInclude Include="..\..\source\Point.h" />
     <ClInclude Include="..\..\source\Range.h" />
     <ClInclude Include="..\..\source\Rectangle.h" />
+    <ClInclude Include="..\..\source\RectangularBorder.h" />
     <ClInclude Include="..\..\source\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -17,6 +17,9 @@
     <Filter Include="Source\App">
       <UniqueIdentifier>{b9f1c075-5a44-42d0-9fd4-f448a7c84b3a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Threading">
+      <UniqueIdentifier>{ed5ec3dd-a7ee-421d-ae09-a4b7118d7be4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\OpenGLHelpers.cpp">
@@ -45,6 +48,12 @@
     </ClCompile>
     <ClCompile Include="..\..\source\OpenGLContext.cpp">
       <Filter>Source\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Threading\DynamicLibrary.h">
+      <Filter>Source\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Threading\DynamicLibrary.cpp">
+      <Filter>Source\Threading</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +125,9 @@
     </ClInclude>
     <ClInclude Include="..\..\source\OpenGLContext.h">
       <Filter>Source\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\RectangularBorder.h">
+      <Filter>Source\Geometry</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

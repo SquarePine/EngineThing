@@ -9,6 +9,7 @@
 #include <limits>
 #include <map>
 #include <memory>
+#include <sstream>
 #include <string>
 #include <strstream>
 #include <vector>
@@ -26,10 +27,13 @@ namespace squarepine
     #include "Line.h"
     #include "Range.h"
     #include "Rectangle.h"
+    #include "RectangularBorder.h"
 
     #include "PixelFormats.h"
     #include "Colour.h"
     #include "Colours.h"
+
+    #include "Threading/DynamicLibrary.h"
 
     #include "MissingOpenGLDefinitions.h"
     #include "OpenGLFunctions.h"

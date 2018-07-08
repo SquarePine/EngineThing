@@ -104,17 +104,19 @@
 #undef jassert
 #define jassert(x) assert(x)
 
-#if defined (_MSC_VER) && _MSC_VER < 1900
-    #undef noexcept
-    #define noexcept throw()
-#endif
+#if defined (_MSC_VER)
+    #if _MSC_VER < 1700
+        #undef override
+        #define override
 
-#if defined (_MSC_VER) && _MSC_VER < 1700
-    #undef override
-    #define override
+        #undef final
+        #define final
+    #endif
 
-    #undef final
-    #define final
+    #if _MSC_VER < 1900
+        #undef noexcept
+        #define noexcept throw()
+    #endif
 #endif
 
 #endif //NATIVE_INCLUDES_H
